@@ -19,3 +19,24 @@
                 {{ form.subject.label }}<br>
                 {{form.subject(placeholder='Your subject ...')}}
             </p>
+            <!-- Content of your request -->
+            <p>
+                {{ form.message.label }}<br>
+                {{ form.message(placeholder='Write your request ...') }}
+            </p>
+            <!-- Submit button -->
+            <p>
+                {{ form.submit }}
+            </p>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+
+
+
+<!-- add the right css file -->
+{% block styles %}
+<link rel="stylesheet" href="{{url_for('.static', filename='styles.css')}}">
+{% endblock %}
