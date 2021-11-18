@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/home/moringa/Event-Mania/virtual/bin/python
+=======
+#!/home/morings/Desktop/Event-Mania/Event-Mania/virtual/bin/python
+>>>>>>> 2c38bc68549c550e73e7b665f4eee9da4fa87299
 # -*- coding: utf-8 -*-
 import re
 import sys
