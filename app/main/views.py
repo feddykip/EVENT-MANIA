@@ -2,7 +2,7 @@ from flask import render_template,request,redirect,url_for,abort
 from . import main
 import urllib.request,json
 #import requests
-from ..models import Event, User
+from ..models import Event, User, Contact
 from .forms import EventForm, ContactForm, UpdateProfile
 from .. import db,photos
 from os import uname
@@ -36,13 +36,10 @@ def recent():
 @main.route('/contactus', methods=['GET', 'POST'])
 def contact():
     form = ContactForm()
-    if request.method == 'POST':
-        name = request.form["name"]
-        email = request.form["email"]
-        subject = request.form["subject"]
-        message = request.form["message"]
-        # res = pd.DataFrame({'name': name, 'email': email, 'subject': subject, 'message': message}, index=[0])
-        # res.to_csv('./contactusMessage.csv')
+    if form.validate_on_submit():
+        new_contact = Contact(name = form.name.data, email = form.email.data, subject = form.subject.data, message = form.message.data )
+        db.session.add(new_contact)
+        db.session.commit()
         return render_template('contact.html', form=form)
 
 

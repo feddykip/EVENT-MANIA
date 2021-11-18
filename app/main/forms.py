@@ -10,9 +10,9 @@ class UpdateProfile(FlaskForm):
 
 
 class ContactForm(FlaskForm):
-    name = TextAreaField("Name")
-    email = TextAreaField("Email")
-    subject = TextAreaField("Subject")
+    name = StringField("Name")
+    email = StringField("Email")
+    subject = StringField("Subject")
     message = TextAreaField("Message")
     submit = SubmitField("Send")    
 

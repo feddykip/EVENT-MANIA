@@ -56,3 +56,16 @@ class Event(db.Model):
     owner = db.Column(db.String(255))
     #followers = db.Column(db.Integer)
     #category = db.Column(db.String(255),index = True)
+
+class Contact(db.Model):
+    __tablename__ = 'contacts'
+    '''
+    Event class to define Event items
+    '''
+    id = db.Column(db.Integer,primary_key = True)
+    name = db.Column(db.String(255))
+    email = db.Column(db.String(255))
+    subject = db.Column(db.String(255))
+    message = db.Column(db.Integer)
+  
+
