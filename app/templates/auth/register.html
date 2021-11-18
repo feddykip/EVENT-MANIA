@@ -1,5 +1,5 @@
 {% extends 'base.html'%}
-
+{% import 'bootstrap/wtf.html' as wtf%}
 
 {% block styles%}
     {{ super() }}
@@ -8,8 +8,20 @@
   integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 {% endblock %}
 
-{% block content %}
 
-<h1>EVENT MANIA</h1>
+{% block content %}
+<body class="register">
+<div class="container voldermort">
+<div class="row">
+<div class="col-md-2"> </div>
+<div class="col-md-8 kemikal">
+
+{{wtf.quick_form(registration_form,button_map={'submit':'danger'})}}
+
+</div>
+<div class="col-md-2"></div>
+</div>
+</div>
+</body>
 
 {% endblock%}
