@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends "base.html" %}
 
 {% extends "index.html" %}
@@ -6,3 +7,27 @@
 <h2>TOGETHER THROUGH</h2>
 <h2>EXPERIENCES</h2>
 {%endblock%}
+=======
+<div class="navbar navbar-expand-lg">
+    <div class="container-fluid text-white">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                {% if current_user.is_authenticated %}
+                <li class="user"><a href="{{url_for('main.profile',uname=current_user.username)}}"><i class="fa fa-user" aria-hidden="true"></i>   {{current_user.username}}</a></li>
+                <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
+                {% else %}
+                <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
+                {%endif%}
+              </ul>
+        </div>
+    </div>
+  </div>
+>>>>>>> 3c416bbb2737052b6fb177ba277bf5f7f6b20c75

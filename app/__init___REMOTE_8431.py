@@ -1,11 +1,4 @@
 from flask import Flask
-<<<<<<< HEAD
-
-# Initializing application
-app = Flask(__name__)
-
-from app.main import views
-=======
 from config import config_options
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
@@ -51,4 +44,3 @@ def create_app(config_name):
 
 
     return app
->>>>>>> 3c416bbb2737052b6fb177ba277bf5f7f6b20c75
