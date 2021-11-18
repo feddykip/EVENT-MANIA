@@ -1,5 +1,14 @@
 from flask import Flask
 <<<<<<< HEAD
+from flask_bootstrap import Bootstrap
+
+
+app = Flask(__name__)
+from app.main import views,forms
+app.secret_key = 'EzxToxiYNiDupeWQ8aLpFQ'
+bootstrap = Bootstrap()
+=======
+<<<<<<< HEAD
 
 # Initializing application
 app = Flask(__name__)
@@ -52,3 +61,4 @@ def create_app(config_name):
 
     return app
 >>>>>>> 3c416bbb2737052b6fb177ba277bf5f7f6b20c75
+>>>>>>> 2c38bc68549c550e73e7b665f4eee9da4fa87299

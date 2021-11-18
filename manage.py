@@ -2,6 +2,12 @@
 from app import app
 
 if __name__ == '__main__':
+    app.run(debug=True)
+=======
+<<<<<<< HEAD
+from app import app
+
+if __name__ == '__main__':
     app.run(debug = True)
 =======
 from app import create_app, db
@@ -34,3 +40,4 @@ def make_shell_context():
 if __name__=='__main__':
     manager.run()
 >>>>>>> 3c416bbb2737052b6fb177ba277bf5f7f6b20c75
+>>>>>>> 2c38bc68549c550e73e7b665f4eee9da4fa87299
