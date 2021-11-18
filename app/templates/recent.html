@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf%}
+
+{% block content %}
+
+<div>
+    <h1>Newly Posted</h1>
+
+    {% for event in events %}
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/events1.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text">{{ event.name }}</p></p>
+          <p class="card-text">{{ event.day }}</</p>
+          <p>{{ event.location }}, Nairobi</p>
+          <p>{{ event.owner }}</p>
+          <p>Blog: {{ event.price }}</p>
+        </div>
+    </div>
+</div>    
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,660 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf%}
+
+{% block content %}
+
+<div>
+  <h1>Events in Nairobi</h1>
+<div class="d-flex justify-content-md-center">
+  <button id="btn-one" type="button" class="btn btn-primary">All</button>
+  <button id="btn-two" type="button" class="btn btn-primary">For you</button>
+  <button id="btn-three" type="button" class="btn btn-primary">Popular</button>
+  <button id="btn-four" type="button" class="btn btn-primary">Live</button>
+  <button id="btn-five" type="button" class="btn btn-primary">This Weekend</button>
+  <button id="btn-six" type="button" class="btn btn-primary">Music</button>
+  <button id="btn-seven" type="button" class="btn btn-primary">Free</button>
+</div>
+</div>
+
+<div id="all">
+<h1>All Events</h1>
+  <div id="flex" class="container-fluid">
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/events1.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">Virtual Speaking Masterclass </p>
+          <p class="card-text">Taking place now</p>
+          <p>Nairobi, Nairobi</p>
+          <p>Free</p>
+          <p>Event Mania</p>
+          <p>12k followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/events2.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">Video Speed Dating</p>
+          <p class="card-text">Taking place now +2more events</p>
+          <p>Nairobi, Nairobi</p>
+          <p>Free</p>
+          <p>Filter Off</p>
+          <p>18k followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/events3.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">Cannabis Colloquia</p>
+          <p class="card-text">Wednesday, 8:00pm</p>
+          <p>Nairobi, Nairobi</p>
+          <p>Free</p>
+          <p>Davine - Nairobi</p>
+          <p>150 followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/events4.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">Tech Industry Symposium</p>
+          <p class="card-text">July 9 8:00pm-dawn</p>
+          <p>Nairobi University, Nairobi</p>
+          <p>Free</p>
+          <p>Nairobi University</p>
+          <p>120 followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/events5.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">Finance Project</p>
+          <p class="card-text">Nov 19 2:00pm-4:00pm</p>
+          <p>Hilton, Nairobi</p>
+          <p>Free</p>
+          <p>Parallel Four</p>
+          <p>12k followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/events6.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">Africa's Mental Health Matters</p>
+          <p class="card-text">Taking place now</p>
+          <p>IGH Hotel, Nairobi</p>
+          <p>Free</p>
+          <p>Africa's Mental Health Matters</p>
+          <p>14k followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/events12.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">East Africa Chef Expo</p>
+          <p class="card-text">Taking place now</p>
+          <p>Sarit Expo <Center></Center>, Nairobi</p>
+          <p>Free</p>
+          <p>CHEF MEDIA LTD</p>
+          <p>795 followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/events7.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">Virtual Speaking Masterclass</p>
+          <p class="card-text">Taking place now</p>
+          <p>Nairobi, Nairobi</p>
+          <p>Free</p>
+          <p>Event Mania</p>
+          <p>12k followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/events8.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">Walk for Pakistan</p>
+          <p class="card-text">Taking place now</p>
+          <p>Nairobi, Nairobi</p>
+          <p>Free</p>
+          <p>Walk for Pakistan</p>
+          <p>12 followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/events9.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">The Watoto Wasome Partners Breakfast</p>
+          <p class="card-text">Taking place now</p>
+          <p>TradeMark Hotel, Nairobi</p>
+          <p>$54.67</p>
+          <p>Affecto Foundation</p>
+          <p>99 followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/events10.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">Tech Mindset Africa</p>
+          <p class="card-text">Taking place now</p>
+          <p>Sunstar Hotel, Nairobi</p>
+          <p>Free</p>
+          <p>Tech Mindset Africa</p>
+          <p>407 followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/popular1.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">Disaster Contingency Planning Training</p>
+          <p class="card-text">Taking place now</p>
+          <p>Appleton resort, Nairobi</p>
+          <p>$867.79</p>
+          <p>Seasoned Development</p>
+          <p>12k followers</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="one">
+    <h1>For you</h1>
+<div id="flex" class="container-fluid">
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/popular1.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">Virtual Speaking Masterclass </p>
+          <p class="card-text">Taking place now</p>
+          <p>Nairobi, Nairobi</p>
+          <p>Free</p>
+          <p>Event Mania</p>
+          <p>12k followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/music2.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">Video Speed Dating</p>
+          <p class="card-text">Taking place now +2more events</p>
+          <p>Nairobi, Nairobi</p>
+          <p>Free</p>
+          <p>Filter Off</p>
+          <p>18k followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/popular3.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">Cannabis Colloquia</p>
+          <p class="card-text">Taking place now</p>
+          <p>Nairobi, Nairobi</p>
+          <p>Free</p>
+          <p>Davine - Nairobi</p>
+          <p>150 followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/music4.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">Tech Industry Symposium</p>
+          <p class="card-text">Taking place now</p>
+          <p>Nairobi University, Nairobi</p>
+          <p>Free</p>
+          <p>Nairobi University</p>
+          <p>120 followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/events5.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">Finance Project</p>
+          <p class="card-text">Taking place now</p>
+          <p>Hilton, Nairobi</p>
+          <p>Free</p>
+          <p>Parallel Four</p>
+          <p>12k followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/popular6.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">Africa's Mental Health Matters</p>
+          <p class="card-text">Taking place now</p>
+          <p>IGH Hotel, Nairobi</p>
+          <p>Free</p>
+          <p>Africa's Mental Health Matters</p>
+          <p>14k followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/events12.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">East Africa Chef Expo</p>
+          <p class="card-text">Taking place now</p>
+          <p>Sarit Expo, Nairobi</p>
+          <p>Free</p>
+          <p>CHEF MEDIA LTD</p>
+          <p>795 followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/events7.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">Virtual Speaking Masterclass</p>
+          <p class="card-text">Taking place now</p>
+          <p>Nairobi, Nairobi</p>
+          <p>Free</p>
+          <p>Event Mania</p>
+          <p>12k followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/music7.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">Walk for Pakistan</p>
+          <p class="card-text">Taking place now</p>
+          <p>Nairobi, Nairobi</p>
+          <p>Free</p>
+          <p>Walk for Pakistan</p>
+          <p>12 followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/events9.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text">The Watoto Wasome Partners Breakfast</p>
+          <p class="card-text">Taking place now</p>
+          <p>TradeMark Hotel, Nairobi</p>
+          <p>$54.67</p>
+          <p>Affecto Foundation</p>
+          <p>99 followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/events10.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">Tech Mindset Africa</p>
+          <p class="card-text">Taking place now</p>
+          <p>Sunstar Hotel, Nairobi</p>
+          <p>Free</p>
+          <p>Tech Mindset Africa</p>
+          <p>407 followers</p>
+        </div>
+    </div>
+    <div class="card" style="width: 22vw;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/events11.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+        <div class="card-body">
+          <p class="card-text fs-5 text-warning">Disaster Contingency Planning Training</p>
+          <p class="card-text">Taking place now</p>
+          <p>Appleton resort, Nairobi</p>
+          <p>$867.79</p>
+          <p>Seasoned Development</p>
+          <p>12k followers</p>
+        </div>
+    </div>
+</div>
+</div>
+<div id="two">
+    <h1>Popular events</h1>
+    <div id="flex" class="container-fluid">
+        <div class="card" style="width: 22vw;">
+            <img class="card-img-top" src="{{ url_for('static', filename='img/popular6.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+            <div class="card-body">
+              <p class="card-text">Virtual Speaking Masterclass </p>
+              <p class="card-text">Taking place now</p>
+              <p>Nairobi, Nairobi</p>
+              <p>Free</p>
+              <p>Event Mania</p>
+              <p>12k followers</p>
+            </div>
+        </div>
+        <div class="card" style="width: 22vw;">
+            <img class="card-img-top" src="{{ url_for('static', filename='img/music7.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+            <div class="card-body">
+              <p class="card-text">Video Speed Dating</p>
+              <p class="card-text">Taking place now +2more events</p>
+              <p>Nairobi, Nairobi</p>
+              <p>Free</p>
+              <p>Filter Off</p>
+              <p>18k followers</p>
+            </div>
+        </div>
+        <div class="card" style="width: 22vw;">
+            <img class="card-img-top" src="{{ url_for('static', filename='img/events12.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+            <div class="card-body">
+              <p class="card-text">Cannabis Colloquia</p>
+              <p class="card-text">Taking place now</p>
+              <p>Nairobi, Nairobi</p>
+              <p>Free</p>
+              <p>Davine - Nairobi</p>
+              <p>150 followers</p>
+            </div>
+        </div>
+        <div class="card" style="width: 22vw;">
+            <img class="card-img-top" src="{{ url_for('static', filename='img/events10.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+            <div class="card-body">
+              <p class="card-text">Tech Industry Symposium</p>
+              <p class="card-text">Taking place now</p>
+              <p>Nairobi University, Nairobi</p>
+              <p>Free</p>
+              <p>Nairobi University</p>
+              <p>120 followers</p>
+            </div>
+        </div>
+        <div class="card" style="width: 22vw;">
+            <img class="card-img-top" src="{{ url_for('static', filename='img/events8.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+            <div class="card-body">
+              <p class="card-text">Finance Project</p>
+              <p class="card-text">Taking place now</p>
+              <p>Hilton, Nairobi</p>
+              <p>Free</p>
+              <p>Parallel Four</p>
+              <p>12k followers</p>
+            </div>
+        </div>
+        <div class="card" style="width: 22vw;">
+            <img class="card-img-top" src="{{ url_for('static', filename='img/events6.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+            <div class="card-body">
+              <p class="card-text">Africa's Mental Health Matters</p>
+              <p class="card-text">Taking place now</p>
+              <p>IGH Hotel, Nairobi</p>
+              <p>Free</p>
+              <p>Africa's Mental Health Matters</p>
+              <p>14k followers</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="three">
+  <h1>Live events</h1>
+  <div id="flex" class="container-fluid">
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events12.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Virtual Speaking Masterclass </p>
+            <p class="card-text">Taking place now</p>
+            <p>Nairobi, Nairobi</p>
+            <p>Free</p>
+            <p>Event Mania</p>
+            <p>12k followers</p>
+          </div>
+      </div>
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events6.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Video Speed Dating</p>
+            <p class="card-text">Taking place now +2more events</p>
+            <p>Nairobi, Nairobi</p>
+            <p>Free</p>
+            <p>Filter Off</p>
+            <p>18k followers</p>
+          </div>
+      </div>
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events11.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Cannabis Colloquia</p>
+            <p class="card-text">Taking place now</p>
+            <p>Nairobi, Nairobi</p>
+            <p>Free</p>
+            <p>Davine - Nairobi</p>
+            <p>150 followers</p>
+          </div>
+      </div>
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/popular4.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Tech Industry Symposium</p>
+            <p class="card-text">Taking place now</p>
+            <p>Nairobi University, Nairobi</p>
+            <p>Free</p>
+            <p>Nairobi University</p>
+            <p>120 followers</p>
+          </div>
+      </div>
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events5.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Finance Project</p>
+            <p class="card-text">Taking place now</p>
+            <p>Hilton, Nairobi</p>
+            <p>Free</p>
+            <p>Parallel Four</p>
+            <p>12k followers</p>
+          </div>
+      </div>
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events6.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Africa's Mental Health Matters</p>
+            <p class="card-text">Taking place now</p>
+            <p>IGH Hotel, Nairobi</p>
+            <p>Free</p>
+            <p>Africa's Mental Health Matters</p>
+            <p>14k followers</p>
+          </div>
+      </div>
+  </div>
+</div>
+<div id="four">
+  <h1>Weekend events</h1>
+  <div id="flex" class="container-fluid">
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/music1.jpg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Virtual Speaking Masterclass </p>
+            <p class="card-text">Taking place now</p>
+            <p>Nairobi, Nairobi</p>
+            <p>Free</p>
+            <p>Event Mania</p>
+            <p>12k followers</p>
+          </div>
+      </div>
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events2.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Video Speed Dating</p>
+            <p class="card-text">Taking place now +2more events</p>
+            <p>Nairobi, Nairobi</p>
+            <p>Free</p>
+            <p>Filter Off</p>
+            <p>18k followers</p>
+          </div>
+      </div>
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events12.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Cannabis Colloquia</p>
+            <p class="card-text">Taking place now</p>
+            <p>Nairobi, Nairobi</p>
+            <p>Free</p>
+            <p>Davine - Nairobi</p>
+            <p>150 followers</p>
+          </div>
+      </div>
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events11.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Tech Industry Symposium</p>
+            <p class="card-text">Taking place now</p>
+            <p>Nairobi University, Nairobi</p>
+            <p>Free</p>
+            <p>Nairobi University</p>
+            <p>120 followers</p>
+          </div>
+      </div>
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events6.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Finance Project</p>
+            <p class="card-text">Taking place now</p>
+            <p>Hilton, Nairobi</p>
+            <p>Free</p>
+            <p>Parallel Four</p>
+            <p>12k followers</p>
+          </div>
+      </div>
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events6.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Africa's Mental Health Matters</p>
+            <p class="card-text">Taking place now</p>
+            <p>IGH Hotel, Nairobi</p>
+            <p>Free</p>
+            <p>Africa's Mental Health Matters</p>
+            <p>14k followers</p>
+          </div>
+      </div>
+  </div>
+</div>
+<div id="five">
+  <h1>Musical events</h1>
+  <div id="flex" class="container-fluid">
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events1.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Virtual Speaking Masterclass </p>
+            <p class="card-text">Taking place now</p>
+            <p>Nairobi, Nairobi</p>
+            <p>Free</p>
+            <p>Event Mania</p>
+            <p>12k followers</p>
+          </div>
+      </div>
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events2.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Video Speed Dating</p>
+            <p class="card-text">Taking place now +2more events</p>
+            <p>Nairobi, Nairobi</p>
+            <p>Free</p>
+            <p>Filter Off</p>
+            <p>18k followers</p>
+          </div>
+      </div>
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events3.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Cannabis Colloquia</p>
+            <p class="card-text">Taking place now</p>
+            <p>Nairobi, Nairobi</p>
+            <p>Free</p>
+            <p>Davine - Nairobi</p>
+            <p>150 followers</p>
+          </div>
+      </div>
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events4.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Tech Industry Symposium</p>
+            <p class="card-text">Taking place now</p>
+            <p>Nairobi University, Nairobi</p>
+            <p>Free</p>
+            <p>Nairobi University</p>
+            <p>120 followers</p>
+          </div>
+      </div>
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events5.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Finance Project</p>
+            <p class="card-text">Taking place now</p>
+            <p>Hilton, Nairobi</p>
+            <p>Free</p>
+            <p>Parallel Four</p>
+            <p>12k followers</p>
+          </div>
+      </div>
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events6.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Africa's Mental Health Matters</p>
+            <p class="card-text">Taking place now</p>
+            <p>IGH Hotel, Nairobi</p>
+            <p>Free</p>
+            <p>Africa's Mental Health Matters</p>
+            <p>14k followers</p>
+          </div>
+      </div>
+  </div>
+</div>
+<div id="six">
+  <h1>Free events</h1>
+  <div id="flex" class="container-fluid">
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events1.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Virtual Speaking Masterclass </p>
+            <p class="card-text">Taking place now</p>
+            <p>Nairobi, Nairobi</p>
+            <p>Free</p>
+            <p>Event Mania</p>
+            <p>12k followers</p>
+          </div>
+      </div>
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events2.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Video Speed Dating</p>
+            <p class="card-text">Taking place now +2more events</p>
+            <p>Nairobi, Nairobi</p>
+            <p>Free</p>
+            <p>Filter Off</p>
+            <p>18k followers</p>
+          </div>
+      </div>
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events3.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Cannabis Colloquia</p>
+            <p class="card-text">Taking place now</p>
+            <p>Nairobi, Nairobi</p>
+            <p>Free</p>
+            <p>Davine - Nairobi</p>
+            <p>150 followers</p>
+          </div>
+      </div>
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events4.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Tech Industry Symposium</p>
+            <p class="card-text">Taking place now</p>
+            <p>Nairobi University, Nairobi</p>
+            <p>Free</p>
+            <p>Nairobi University</p>
+            <p>120 followers</p>
+          </div>
+      </div>
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events5.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Finance Project</p>
+            <p class="card-text">Taking place now</p>
+            <p>Hilton, Nairobi</p>
+            <p>Free</p>
+            <p>Parallel Four</p>
+            <p>12k followers</p>
+          </div>
+      </div>
+      <div class="card" style="width: 22vw;">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/events6.jpeg') }}" alt="Card image cap" style="height: 25vh;">
+          <div class="card-body">
+            <p class="card-text">Africa's Mental Health Matters</p>
+            <p class="card-text">Taking place now</p>
+            <p>IGH Hotel, Nairobi</p>
+            <p>Free</p>
+            <p>Africa's Mental Health Matters</p>
+            <p>14k followers</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <h1>Post an Event</h1>
+
+  <div>
+      {{wtf.quick_form(event_form)}}
+  </div>
+  
+</div>
+{% endblock %}

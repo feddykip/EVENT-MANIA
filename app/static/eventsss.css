@@ -1,0 +1,14 @@
+#flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card{
+    margin: 0vh 1vw 1vh 0vw;
+}
+#btn-one, #btn-two, #btn-three, #btn-four, #btn-five, #btn-six, #btn-seven{
+    margin: 0vh 2vw 0vh 2vw;
+}
+#one, #two, #three, #four, #five, #six, #seven{
+    display: none;
+}
