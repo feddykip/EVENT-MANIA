@@ -1,7 +1,7 @@
 import os
 
 class Config:
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/eventmania'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://morings:Access@localhost/eventmania'
     #UPLOADED_PHOTOS_DEST ='app/static/photos'
 
     #SQLALCHEMY_TRACK_MODIFICATIONS = False

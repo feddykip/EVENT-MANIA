@@ -13,7 +13,7 @@ class ContactForm(FlaskForm):
     name = StringField("Name")
     email = StringField("Email")
     subject = StringField("Subject")
-    message = TextAreaField("Message")
+    message = StringField("Message")
     submit = SubmitField("Send")    
 
 

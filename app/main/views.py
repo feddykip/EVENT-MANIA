@@ -1,7 +1,7 @@
 from flask import render_template,request,redirect,url_for,abort
+from wtforms.validators import Email
 from . import main
 import urllib.request,json
-#import requests
 from ..models import Event, User, Contact
 from .forms import EventForm, ContactForm, UpdateProfile
 from .. import db,photos
@@ -33,14 +33,15 @@ def recent():
 
     return render_template('recent.html', events = events)
 
-@main.route('/contactus', methods=['GET', 'POST'])
+@main.route('/contactus',methods=['GET','POST'])    
 def contact():
-    form = ContactForm()
-    if form.validate_on_submit():
-        new_contact = Contact(name = form.name.data, email = form.email.data, subject = form.subject.data, message = form.message.data )
+    contact_form = ContactForm()
+    if contact_form.validate_on_submit():
+        new_contact = Contact(name = contact_form.name.data, email = contact_form.email.data, subject = contact_form.subject.data,message = contact_form.message.data)
         db.session.add(new_contact)
         db.session.commit()
-        return render_template('contact.html', form=form)
+
+    return render_template('contact.html',contact_form = contact_form)
 
 
 @main.route('/')
